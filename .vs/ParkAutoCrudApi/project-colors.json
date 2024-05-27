@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "833db328-cbf1-4773-9c7d-c0366806667d": {
+      "ProjectGuid": "833db328-cbf1-4773-9c7d-c0366806667d",
+      "DisplayName": "ParkAutoCrudApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,10 @@
+﻿insert into car (id, brand, price, horse_power, fabrication_year) values (1, 'Chevrolet', 54157, 108, 2008);
+insert into car (id, brand, price, horse_power, fabrication_year) values (2, 'Chevrolet', 97634, 141, 2002);
+insert into car (id, brand, price, horse_power, fabrication_year) values (3, 'Cadillac', 35548, 145, 2007);
+insert into car (id, brand, price, horse_power, fabrication_year) values (4, 'Acura', 16133, 187, 1998);
+insert into car (id, brand, price, horse_power, fabrication_year) values (5, 'Volkswagen', 36573, 278, 2012);
+insert into car (id, brand, price, horse_power, fabrication_year) values (6, 'Ford', 13282, 136, 1986);
+insert into car (id, brand, price, horse_power, fabrication_year) values (7, 'Hyundai', 47209, 101, 2008);
+insert into car (id, brand, price, horse_power, fabrication_year) values (8, 'Volvo', 53835, 197, 2009);
+insert into car (id, brand, price, horse_power, fabrication_year) values (9, 'Suzuki', 51984, 270, 1999);
+insert into car (id, brand, price, horse_power, fabrication_year) values (10, 'Lexus', 36497, 270, 2002);
