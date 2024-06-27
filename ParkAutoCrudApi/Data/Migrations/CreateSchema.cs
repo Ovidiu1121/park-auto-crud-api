@@ -13,7 +13,7 @@ namespace ParkAutoCrudApi.Data.Migrations
         public override void Up()
         {
 
-            Create.Table("car")
+            Create.Table("carParking")
                 .WithColumn("id").AsInt32().PrimaryKey().Identity()
                 .WithColumn("brand").AsString(128).NotNullable()
                 .WithColumn("price").AsInt32().NotNullable()

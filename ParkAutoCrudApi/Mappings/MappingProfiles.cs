@@ -10,6 +10,7 @@ namespace ParkAutoCrudApi.Mappings
         {
             CreateMap<CreateCarRequest, Car>();
             CreateMap<UpdateCarRequest, Car>();
+            CreateMap<CarDto, Car>().ReverseMap();
         }
     }
 }

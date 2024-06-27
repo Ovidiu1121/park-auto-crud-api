@@ -18,17 +18,13 @@ namespace ParkAutoCrudApi.Cars.Controller
             _carQueryService = carQueryService;
         }
 
-        public override async Task<ActionResult<Car>> CreateCar([FromBody] CreateCarRequest request)
+        public override async Task<ActionResult<CarDto>> CreateCar([FromBody] CreateCarRequest request)
         {
             try
             {
                 var cars = await _carCommandService.CreateCar(request);
 
-                return Ok(cars);
-            }
-            catch (InvalidPrice ex)
-            {
-                return BadRequest(ex.Message);
+                return Created("Masina a fost adaugata",cars);
             }
             catch (ItemAlreadyExists ex)
             {
@@ -36,7 +32,7 @@ namespace ParkAutoCrudApi.Cars.Controller
             }
         }
 
-        public override async Task<ActionResult<Car>> DeleteCar([FromRoute] int id)
+        public override async Task<ActionResult<CarDto>> DeleteCar([FromRoute] int id)
         {
             try
             {
@@ -50,7 +46,7 @@ namespace ParkAutoCrudApi.Cars.Controller
             }
         }
 
-        public override async Task<ActionResult<IEnumerable<Car>>> GetAll()
+        public override async Task<ActionResult<ListCarDto>> GetAll()
         {
             try
             {
@@ -63,7 +59,7 @@ namespace ParkAutoCrudApi.Cars.Controller
             }
         }
 
-        public override async Task<ActionResult<Car>> GetByBrandRoute([FromRoute] string brand)
+        public override async Task<ActionResult<CarDto>> GetByBrandRoute([FromRoute] string brand)
         {
             try
             {
@@ -76,17 +72,26 @@ namespace ParkAutoCrudApi.Cars.Controller
             }
         }
 
-        public override async Task<ActionResult<Car>> UpdateCar([FromRoute] int id, [FromBody] UpdateCarRequest request)
+        public override async Task<ActionResult<CarDto>> GetByIdRoute(int id)
         {
             try
             {
-                var cars = await _carCommandService.UpdateCar(id, request);
-
+                var cars = await _carQueryService.GetById(id);
                 return Ok(cars);
             }
-            catch (InvalidPrice ex)
+            catch (ItemDoesNotExist ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
+            }
+        }
+
+        public override async Task<ActionResult<CarDto>> UpdateCar([FromRoute]int id, [FromBody] UpdateCarRequest request)
+        {
+            try
+            {
+                var cars = await _carCommandService.UpdateCar(id,request);
+
+                return Ok(cars);
             }
             catch (ItemDoesNotExist ex)
             {

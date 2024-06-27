@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkAutoCrudApi", "ParkAutoCrudApi\ParkAutoCrudApi.csproj", "{833DB328-CBF1-4773-9C7D-C0366806667D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{3AD522D8-5DDC-4710-85E7-3432AF320793}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{833DB328-CBF1-4773-9C7D-C0366806667D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833DB328-CBF1-4773-9C7D-C0366806667D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{833DB328-CBF1-4773-9C7D-C0366806667D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD522D8-5DDC-4710-85E7-3432AF320793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD522D8-5DDC-4710-85E7-3432AF320793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD522D8-5DDC-4710-85E7-3432AF320793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD522D8-5DDC-4710-85E7-3432AF320793}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

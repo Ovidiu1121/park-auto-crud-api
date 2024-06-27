@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ParkAutoCrudApi.Cars.Model
 {
-    [Table("car")]
+    [Table("carParking")]
     public class Car
     {
 

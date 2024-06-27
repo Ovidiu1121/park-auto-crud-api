@@ -1,11 +1,12 @@
 ﻿using ParkAutoCrudApi.Cars.Model;
+using ParkAutoCrudApi.Dto;
 
 namespace ParkAutoCrudApi.Cars.Service.interfaces
 {
     public interface ICarQueryService
     {
-        Task<IEnumerable<Car>> GetAllCar();
-        Task<Car> GetByBrand(string brand);
-        Task<Car> GetById(int id);
+        Task<ListCarDto> GetAllCar();
+        Task<CarDto> GetByBrand(string brand);
+        Task<CarDto> GetById(int id);
     }
 }

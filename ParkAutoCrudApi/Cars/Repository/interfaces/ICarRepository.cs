@@ -5,11 +5,11 @@ namespace ParkAutoCrudApi.Cars.Repository.interfaces
 {
     public interface ICarRepository
     {
-        Task<IEnumerable<Car>> GetAllAsync();
-        Task<Car> GetByBrandAsync(string brand);
-        Task<Car> GetByIdAsync(int id);
-        Task<Car> CreateCar(CreateCarRequest request);
-        Task<Car> UpdateCar(int id, UpdateCarRequest request);
-        Task<Car> DeleteCarById(int id);
+        Task<ListCarDto> GetAllAsync();
+        Task<CarDto> GetByBrandAsync(string brand);
+        Task<CarDto> GetByIdAsync(int id);
+        Task<CarDto> CreateCar(CreateCarRequest request);
+        Task<CarDto> UpdateCar(int id,UpdateCarRequest request);
+        Task<CarDto> DeleteCarById(int id);
     }
 }

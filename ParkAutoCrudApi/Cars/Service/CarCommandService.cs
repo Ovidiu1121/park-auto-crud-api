@@ -16,14 +16,10 @@ namespace ParkAutoCrudApi.Cars.Service
             _repository = repository;
         }
 
-        public async Task<Car> CreateCar(CreateCarRequest request)
+        public async Task<CarDto> CreateCar(CreateCarRequest request)
         {
-            if (request.Price<0)
-            {
-                throw new InvalidPrice(Constants.INVALID_PRICE);
-            }
-
-            Car car = await _repository.GetByBrandAsync(request.Brand);
+            
+            CarDto car = await _repository.GetByBrandAsync(request.Brand);
 
             if (car!=null)
             {
@@ -34,9 +30,9 @@ namespace ParkAutoCrudApi.Cars.Service
             return car;
         }
 
-        public async Task<Car> DeleteCar(int id)
+        public async Task<CarDto> DeleteCar(int id)
         {
-            Car car = await _repository.GetByIdAsync(id);
+            CarDto car = await _repository.GetByIdAsync(id);
 
             if (car==null)
             {
@@ -48,14 +44,10 @@ namespace ParkAutoCrudApi.Cars.Service
             return car;
         }
 
-        public async Task<Car> UpdateCar(int id, UpdateCarRequest request)
+        public async Task<CarDto> UpdateCar(int id, UpdateCarRequest request)
         {
-            if (request.Price<0)
-            {
-                throw new InvalidPrice(Constants.INVALID_PRICE);
-            }
 
-            Car car = await _repository.GetByIdAsync(id);
+            CarDto car = await _repository.GetByIdAsync(id);
 
             if (car==null)
             {
